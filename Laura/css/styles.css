@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+:root {
+    --primary-color: #12242c;
+    --text-color: #5c686c;
+
+    --primary-font: 'Playfair Display', serif;
+    --secondry-font: 'Poppins', sans-serif;
+}
+
+body {
+    color: var(--primary-color);
+    font-family: var(--secondry-font);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-size: 65px;
+    font-weight: 800;
+    font-family: var(--primary-font);
+}
+
+h2 {
+    font-size: 35px;
+    font-family: var(--primary-font);
+}
+
+/* Button Style */
+.btn {
+    box-sizing: border-box;
+    padding: 12px 18px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--primary-color);
+    color: #FFF;
+    border: 2px solid var(--primary-color); 
+}
+
+.btn:hover {
+    background: #FFF;
+    color: var(--primary-color);
+}
+
+/* Alert Box */
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
+
+
+/* Header Section */
+/* Main nav */
+nav {
+    width: 100%;
+    background: var(--primary-color);
+    z-index: 99;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;  
+}
+
+nav .navbar-brand {
+    width: 150px;
+    margin-right: 20px;
+}
+
+nav .navbar {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
+
+nav .sign-btn {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    height: auto;
+}
+
+nav .navbar-item {
+    margin: 0 10px;
+}
+
+nav .navbar-item .navbar-link {
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .3s;
+    display: block;
+    color: #b4b4b4;
+}
+
+.login-menu {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    background-color: #FFF;
+    width: 200px;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.subnav-content li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+}
+
+.subnav-content li a {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 15px;
+}
+
+.subnav-content li a:hover {
+    background: #f3f3f3;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.login-menu span {
+    color: var(--text-color);
+    margin-right: 10px;
+    cursor: pointer;
+    color: #b4b4b4;
+}
+
+/* 
+=================================  
+    Footer Section
+================================= 
+*/
+
+footer {
+    background: var(--primary-color);
+    text-align: left;
+    padding: 60px 0;
+}
+
+footer .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 30px auto;
+}
+
+footer .footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-col p{
+    color: #FFF;
+    text-align: left;
+    margin: 10px 30px 10px 0;
+} 
+
+footer .footer-logo-img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    color: #FFF;
+    text-align: left;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+footer ul li {
+    text-align: left;
+    margin: 20px 0;
+}
+
+footer a, span {
+    color: #FFF;
+    transition: all .3s ease-in-out;
+}
+
+footer ul li a:hover {
+    margin-left: 8px;
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .contact a {
+    margin-bottom: 10px;
+}
+
+footer .social-icon {
+    margin-top: 20px;
+}
+
+footer .social-icon i {
+    font-size: 25px;
+}
+
+/* 
+=================================  
+    Signin Page
+================================= 
+*/
+
+.signin {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)) ,url(../images/signin-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.log-bar{
+    display: grid;
+    place-items: center;
+}
+.log-bar .sid-bar img{
+    margin: 10px 15px;
+}
+
+.login-form{
+    margin: 30px 15px;
+    padding: 60px;
+    position: relative;
+    width: 500px;
+    height: auto;
+    background: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.login-form h2{
+    font-size: 2em;
+    color: #000000;
+    text-align: center;
+}
+.login_box{
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_box label {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.login_box input[type="email"], 
+.login_box input[type="password"], 
+.login_box input[type="text"]  {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+    outline: none;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form .btn {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* 
+=================================  
+    Product Cart style
+================================= 
+*/
+
+.product-card {
+  max-width: 400px;
+  background-color: #fff;
+  padding: 16px;
+  box-shadow: 0 5px 5px #e1e1e1;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: all .3s;
+  margin: 30px 10px;
+}
+
+.product-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-card h4 {
+  font-size: 1.3em;
+  margin: 0.5em 0;
+}
+
+.product-card div {
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.product-card div span {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.product-card form {
+   margin: 20px 0;
+}
+
+.product-card:hover {
+  background-color: lightslategray;
+  color: #fff;
+}
+
+.product-card:hover span {
+    color: #FFF;
+}
+
+.product-card:hover button {
+  color: #000;
+  background-color: #fff;
+}
+
+

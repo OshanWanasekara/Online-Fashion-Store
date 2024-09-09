@@ -1,0 +1,121 @@
+/* Static Variables */
+:root {
+    --admin-header-height: 70px;
+    --admin-footer-height: 70px;
+    --admin-nav-width: 250px;
+    --spacing: 1rem;
+    --column-count: 2;
+  }
+  
+  /* Global CSS */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Main Layout Grid */
+  .admin {
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: var(--admin-header-height) 1fr var(--admin-footer-height);
+    grid-template-columns: var(--admin-nav-width) 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "footer footer";
+  }
+  
+  .admin__header {
+    display: flex;
+    flex-basis: 100%;
+    grid-area: header;
+    height: var(--admin-header-height);
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    position: relative;
+  }
+  
+  .admin__nav {
+    flex: 0 0 var(--admin-nav-width);
+    grid-area: nav;
+    background-color: #313541;
+  }
+  
+  .admin__main {
+    flex: 1;
+    grid-area: main;
+    padding: var(--spacing);
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: #f4f7fa;
+  }
+  
+  .admin__footer {
+    display: flex;
+    grid-area: footer;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--admin-footer-height);
+    padding: 0 var(--spacing);
+    color: #4e5561;
+    background-color: #1d2127;
+  }
+  
+  /* Dashboard Overview Grid */
+  .dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--spacing) * -0.5);
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), 1fr);
+    grid-gap: var(--spacing);
+  }
+  
+  .dashboard__item {
+    flex: 1 1 50%;
+    grid-column-end: span 2;
+    padding: calc(var(--spacing) / 2);
+  }
+  
+  .dashboard__item--full {
+    flex-basis: 100%;
+    grid-column: 1 / -1;
+  }
+  
+  .dashboard__item--col {
+    flex-basis: calc(100% / var(--column-count));
+    grid-column-end: span 1;
+  }
+  
+  /* Demo stuff to make it look nice */
+  a {
+    color: #dc5a60;
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .logo {
+    display: flex;
+    flex: 0 0 var(--admin-nav-width);
+    height: var(--admin-header-height);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    color: #fff;
+    background-color: #dc5a60;
+  }
